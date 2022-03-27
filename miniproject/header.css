@@ -134,7 +134,76 @@ a.navmenu{
     margin-right: 5px;
     background-color: #f6f6f6;
 }
+/* 드롭다운 메뉴 20220326 */
+.nabvar_menu_somany{
+    color: black;
+    text-decoration: none;
+}
+.navbar_menu li{
+    list-style: none;
+    text-decoration: none;
+}
 
+.navbar_dropmenu_step1, .navbar_dropmenu_step2, .navbar_dropmenu_step3{
+    display: none;
+}
+.navbar_dropmenu_step1 li:hover > ul{
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+.navbar_dropmenu_step2 li:hover > ul{
+    top: 0;
+    left: 180px;
+    display: flex;
+    flex-direction: column;
+}
+.navbar_dropmenu_step3:hover{
+    display: flex;
+    flex-direction: column;
+}
+.navbar_dropmenu_step1{
+    z-index: 100;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid gray; */
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    width: 180px;
+    height:550px;
+}
+.navbar_dropmenu_step2{
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid gray; */
+    background-color: white;
+    color: black;
+    position: absolute;
+    left: 180px;
+    width: 180px;
+    height:550px;
+}
+.navbar_dropmenu_step3{
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid gray; */
+    background-color: white;
+    color: black;
+    position: absolute;
+    width: 180px;
+    left: 360px;
+    height:550px;
+}
+.has_dropmenu:hover .navbar_dropmenu_step1{
+    display: flex;
+    flex-direction: column;
+}
 /* 큰 배너  */
 .hero{
     clear: both;
@@ -168,14 +237,6 @@ a.navmenu{
     text-decoration: none;
     cursor: pointer;
 }
-.hero .content_slide .hot_content_slide{
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    transition-property: transform;
-    box-sizing: content-box;
-} 
 .hero .hot_content{
     height: 320px;
     position: absolute;
@@ -312,10 +373,10 @@ a.navmenu{
 }
 .hero .content_slide .small_slide .swiper_smallslide_wrapper{
     width: 960px;
-    position: relative;
+    /* position: relative; */
     overflow: hidden;
     float: left;
-    display: flex;
+    /* display: flex; */
 }
 .hero .content_slide .small_slide .swiper_smallslide_wrapper .swiper_smallslide{
     flex: 0 0 auto;
@@ -457,9 +518,9 @@ a.navmenu{
     backdrop-filter: blur(3px);
 }
 .modal_header1>.modal_content_header1{
-    position: relative;
-    top: 200px;
-    left: 650px;
+    position: absolute;
+    top: 300px;
+    left: calc(50% - 180px);
     width: 360px !important;
     background-color: white;
     border-radius: 6px;
@@ -649,31 +710,3 @@ a.navmenu{
 
 
 
-
-
-/* .modal{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top:0;
-    width: 100%;
-    overflow: auto;
-    background-color: #ced4da;
-}
-.modal_content{
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-}
-.close{
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-}
-.close:hover, .close:focus{
-    color: black;
-    cursor:pointer;
-} */
